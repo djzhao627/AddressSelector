@@ -43,7 +43,7 @@
     // ...
 ```
 
-### BottomDialog
+### BottomDialog视图
 
 ```
     BottomDialog dialog = new BottomDialog(context);
