@@ -1,8 +1,8 @@
-# JDAddressSelector
+# AddressSelector
 
 一个 Android 级联地址选择器。
 
-![image](https://github.com/djzhao627/JDAddressSelector/raw/master/screenshots/screenshot1.jpg)
+![image](https://github.com/djzhao627/AddressSelector/raw/master/screenshots/screenshot1.jpg)
 
 ## 添加依赖
 
@@ -17,15 +17,18 @@
     
 模块的 `build.gradle` 中：
 
+```
     dependencies {
         ...
-        compile 'com.github.djzhao627:JDAddressSelector:1.1.6'
+        compile 'com.github.djzhao627:AddressSelector:0.1'
     }
+```
     
 ## 使用方法
 
 ### 使用原始视图
 
+```
     AddressSelector selector = new AddressSelector(context);
     selector.setOnAddressSelectedListener(new AddressSelector.OnAddressSelectedListener() {
         @Override
@@ -38,16 +41,19 @@
     // frameLayout.addView(view)
     // new AlertDialog.Builder(context).setView(view).show()
     // ...
-    
+```
+
 ### BottomDialog
 
+```
     BottomDialog dialog = new BottomDialog(context);
     dialog.setOnAddressSelectedListener(listener);
     dialog.show();
+```
     
 ### 使用自定义数据源
 
-
+```
     selector.setAddressProvider(new AddressProvider() {
         @Override
         public void provideProvinces(AddressReceiver<Province> addressReceiver) {
@@ -78,4 +84,4 @@
             // blahblahblah 
         }
     });
-    
+```    
